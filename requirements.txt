@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 fastapi
  uvicorn
 pydantic
 python-multipart
+=======
+fastapi
+ uvicorn
+pydantic
+python-multipart
+>>>>>>> c4904f4 (initial skillbridge ai project)
 pypdf
