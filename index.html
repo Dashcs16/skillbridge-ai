@@ -1,204 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
+<section class="dashboard-grid">
 
-<head>
-    <meta charset="UTF-8">
+    <div class="dashboard-card resume-card">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div class="card-icon">📄</div>
 
-    <title>SkillBridge AI</title>
+        <h2>Resume Intelligence</h2>
 
-    <link rel="stylesheet" href="/static/style.css">
-</head>
+        <p>
+            Upload your resume and automatically detect
+            your technical skills.
+        </p>
 
-
-<body>
-
-
-    <!-- Navbar -->
-
-    <nav>
-
-        <h2>🤖 SkillBridge AI</h2>
-
-        <span>AI Career Intelligence Platform</span>
-
-    </nav>
-
-
-
-    <!-- Main Container -->
-
-    <div class="container">
-
-
-        <section class="hero">
-
-            <h1>Discover Your <span>Skill Gap</span></h1>
-
-            <p>
-                Analyze your current skills, compare them with industry
-                requirements and get your personalized career roadmap.
-            </p>
-
-        </section>
-
-
-
-        <!-- Form -->
-
-        <section class="analysis-box">
-
-            <h2>🚀 Analyze Your Skills</h2>
-
-
-            <label>Your Name</label>
+        <div class="upload-area">
 
             <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
+                type="file"
+                id="resume"
+                accept=".pdf,.docx"
             >
 
+            <label for="resume" class="upload-label">
+                📤 Choose Resume
+            </label>
 
-
-            <label>Your Current Skills</label>
-
-            <textarea
-                id="skills"
-                placeholder="Example: HTML, CSS, JavaScript, Python"
-            ></textarea>
-
-
-            <label>Select Your Career Goal</label>
-
-            <select id="career">
-
-                <option value="">-- Select Career --</option>
-
-                <option value="Frontend Developer">
-                    Frontend Developer
-                </option>
-
-                <option value="Backend Developer">
-                    Backend Developer
-                </option>
-
-                <option value="Full Stack Developer">
-                    Full Stack Developer
-                </option>
-
-                <option value="Data Analyst">
-                    Data Analyst
-                </option>
-
-                <option value="AI/ML Engineer">
-                    AI/ML Engineer
-                </option>
-
-            </select>
-
-
-            <button onclick="analyzeSkills()">
-
-                🤖 Analyze My Skills
-
-            </button>
-
-
-        </section>
-
-
-
-        <!-- Loading -->
-
-        <div id="loading" class="loading">
-
-            🤖 AI is analyzing your skills...
+            <p id="fileName">PDF or DOCX • Max 5 MB</p>
 
         </div>
 
+        <button onclick="uploadResume()" class="secondary-btn">
+            🔍 Analyze Resume
+        </button>
 
-
-        <!-- Results -->
-
-        <section id="result" class="result-box">
-
-
-            <h2 id="welcome"></h2>
-
-
-            <!-- Score -->
-
-            <div class="score-card">
-
-                <h3>Job Readiness Score</h3>
-
-                <div id="score" class="score">
-
-                    0%
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Matched Skills -->
-
-            <div class="result-section">
-
-                <h3>✅ Skills You Have</h3>
-
-                <div id="matchedSkills" class="skills-container"></div>
-
-            </div>
-
-
-
-            <!-- Missing Skills -->
-
-            <div class="result-section">
-
-                <h3>❌ Skills You Need to Learn</h3>
-
-                <div id="missingSkills" class="skills-container"></div>
-
-            </div>
-
-
-
-            <!-- Recommendation -->
-
-            <div class="recommendation">
-
-                <h3>💡 AI Recommendation</h3>
-
-                <p id="recommendationText"></p>
-
-            </div>
-
-
-
-            <!-- Roadmap -->
-
-            <div class="roadmap">
-
-                <h3>🗺️ Your Personalized Learning Roadmap</h3>
-
-                <div id="roadmapSteps"></div>
-
-            </div>
-
-
-        </section>
-
+        <div id="resumeResult"></div>
 
     </div>
 
 
-<script src="/static/script.js"></script>
+    <div class="dashboard-card stats-card">
 
-</body>
+        <div class="card-icon">📊</div>
 
-</html>
+        <h2>Career Intelligence</h2>
+
+        <div class="mini-stat">
+
+            <span>🎯</span>
+
+            <div>
+                <strong>Skill Gap</strong>
+                <small>Identify missing skills</small>
+            </div>
+
+        </div>
+
+        <div class="mini-stat">
+
+            <span>🗺️</span>
+
+            <div>
+                <strong>Personal Roadmap</strong>
+                <small>Step-by-step learning path</small>
+            </div>
+
+        </div>
+
+        <div class="mini-stat">
+
+            <span>💼</span>
+
+            <div>
+                <strong>Career Readiness</strong>
+                <small>Industry-focused analysis</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

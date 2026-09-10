@@ -5,11 +5,17 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>SkillBridge AI</title>
-<link rel="stylesheet" href="/static/style.css">
-    
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
 
 </head>
 
@@ -17,128 +23,225 @@
 <body>
 
 
-    <!-- Navbar -->
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
 
-    <nav>
+    <aside class="sidebar">
 
-        <h2>🤖 SkillBridge AI</h2>
+        <div class="logo">
 
-        <span>AI Career Intelligence Platform</span>
+            <h1>🤖 SkillBridge</h1>
 
-    </nav>
-
-
-
-    <!-- Main Container -->
-
-    <div class="container">
-
-
-        <section class="hero">
-
-            <h1>Discover Your <span>Skill Gap</span></h1>
-
-            <p>
-                Analyze your current skills, compare them with industry
-                requirements and get your personalized career roadmap.
-            </p>
-
-        </section>
-
-
-
-        <!-- Form -->
-
-        <section class="analysis-box">
-
-            <h2>🚀 Analyze Your Skills</h2>
-
-
-            <label>Your Name</label>
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-            >
-
-
-
-            <label>Your Current Skills</label>
-
-            <textarea
-                id="skills"
-                placeholder="Example: HTML, CSS, JavaScript, Python"
-            ></textarea>
-
-
-            <label>Select Your Career Goal</label>
-
-            <select id="career">
-
-                <option value="">-- Select Career --</option>
-
-                <option value="Frontend Developer">
-                    Frontend Developer
-                </option>
-
-                <option value="Backend Developer">
-                    Backend Developer
-                </option>
-
-                <option value="Full Stack Developer">
-                    Full Stack Developer
-                </option>
-
-                <option value="Data Analyst">
-                    Data Analyst
-                </option>
-
-                <option value="AI/ML Engineer">
-                    AI/ML Engineer
-                </option>
-
-            </select>
-
-
-            <button onclick="analyzeSkills()">
-
-                🤖 Analyze My Skills
-
-            </button>
-
-
-        </section>
-
-
-
-        <!-- Loading -->
-
-        <div id="loading" class="loading">
-
-            🤖 AI is analyzing your skills...
+            <p>AI Career Intelligence</p>
 
         </div>
 
 
+        <div class="menu-title">
 
-        <!-- Results -->
+            MAIN MENU
 
-        <section id="result" class="result-box">
-
-
-            <h2 id="welcome"></h2>
+        </div>
 
 
-            <!-- Score -->
+        <nav class="side-menu">
 
-            <div class="score-card">
 
-                <h3>Job Readiness Score</h3>
+            <a
+                href="#dashboard"
+                class="menu-item active"
+            >
 
-                <div id="score" class="score">
+                <span>🏠</span>
 
-                    0%
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="#resumeSection"
+                class="menu-item"
+            >
+
+                <span>📄</span>
+
+                Resume Intelligence
+
+            </a>
+
+
+            <a
+                href="#skillAnalysis"
+                class="menu-item"
+            >
+
+                <span>🧠</span>
+
+                Skill Analysis
+
+            </a>
+
+
+            <a
+                href="#result"
+                class="menu-item"
+            >
+
+                <span>🗺️</span>
+
+                Career Roadmap
+
+            </a>
+
+
+            <a
+                href="#insights"
+                class="menu-item"
+            >
+
+                <span>📊</span>
+
+                Insights
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="ai-status">
+
+                <span class="status-dot"></span>
+
+                AI System Active
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
+
+    <main class="main-content">
+
+
+        <!-- ========================= -->
+        <!-- TOP HEADER -->
+        <!-- ========================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Career Intelligence Dashboard</h2>
+
+                <p>
+                    Build your skills. Shape your future.
+                </p>
+
+            </div>
+
+
+            <div class="top-profile">
+
+                <div class="notification">
+
+                    🔔
+
+                </div>
+
+                <div class="profile-icon">
+
+                    👩‍💻
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ========================= -->
+        <!-- DASHBOARD -->
+        <!-- ========================= -->
+
+        <section
+            id="dashboard"
+            class="hero-dashboard"
+        >
+
+
+            <div class="hero-badge">
+
+                🚀 AI POWERED PLATFORM
+
+            </div>
+
+
+            <h1>
+
+                Discover Your
+
+                <span>Skill Gap</span>
+
+            </h1>
+
+
+            <p>
+
+                Analyze your current skills, compare them with
+                industry requirements and get a personalized
+                learning roadmap.
+
+            </p>
+
+
+            <a
+                href="#skillAnalysis"
+                class="hero-button"
+            >
+
+                Start Analysis →
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- DASHBOARD STATS -->
+        <!-- ========================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    🎯
+
+                </div>
+
+
+                <div>
+
+                    <p>Career Goals</p>
+
+                    <h2>5+</h2>
 
                 </div>
 
@@ -146,49 +249,43 @@
 
 
 
-            <!-- Matched Skills -->
+            <div class="stat-card">
 
-            <div class="result-section">
+                <div class="stat-icon">
 
-                <h3>✅ Skills You Have</h3>
+                    🧠
 
-                <div id="matchedSkills" class="skills-container"></div>
-
-            </div>
+                </div>
 
 
+                <div>
 
-            <!-- Missing Skills -->
+                    <p>Skill Analysis</p>
 
-            <div class="result-section">
+                    <h2>AI Powered</h2>
 
-                <h3>❌ Skills You Need to Learn</h3>
-
-                <div id="missingSkills" class="skills-container"></div>
+                </div>
 
             </div>
 
 
 
-            <!-- Recommendation -->
+            <div class="stat-card">
 
-            <div class="recommendation">
+                <div class="stat-icon">
 
-                <h3>💡 AI Recommendation</h3>
+                    📈
 
-                <p id="recommendationText"></p>
-
-            </div>
+                </div>
 
 
+                <div>
 
-            <!-- Roadmap -->
+                    <p>Career Growth</p>
 
-            <div class="roadmap">
+                    <h2>Personalized</h2>
 
-                <h3>🗺️ Your Personalized Learning Roadmap</h3>
-
-                <div id="roadmapSteps"></div>
+                </div>
 
             </div>
 
@@ -196,11 +293,606 @@
         </section>
 
 
-    </div>
+
+        <!-- ========================= -->
+        <!-- RESUME INTELLIGENCE -->
+        <!-- ========================= -->
+
+        <section
+            id="resumeSection"
+            class="resume-section"
+        >
 
 
+            <div class="section-heading">
+
+                <p class="small-title">
+
+                    RESUME INTELLIGENCE
+
+                </p>
+
+
+                <h2>
+
+                    📄 Upload Your Resume
+
+                </h2>
+
+
+                <p>
+
+                    Upload your PDF or DOCX resume.
+                    Our AI-powered system will automatically
+                    detect your technical skills.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="resume-card">
+
+
+                <!-- LEFT -->
+
+                <div class="resume-info">
+
+
+                    <div class="big-file-icon">
+
+                        📄
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Smart Resume Analysis
+
+                        </h3>
+
+
+                        <p>
+
+                            Extract technical skills from your
+                            resume and use them for intelligent
+                            career analysis.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="resume-upload-box">
+
+
+                    <input
+                        type="file"
+                        id="resume"
+                        accept=".pdf,.docx"
+                    >
+
+
+                    <p id="fileName">
+
+                        📄 PDF or DOCX • Max 5 MB
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        onclick="uploadResume()"
+                    >
+
+                        🔍 Analyze Resume
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RESUME RESULT -->
+
+            <div id="resumeResult"></div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- SKILL ANALYSIS -->
+        <!-- ========================= -->
+
+        <section
+            id="skillAnalysis"
+            class="analysis-section"
+        >
+
+
+            <div class="section-heading">
+
+                <p class="small-title">
+
+                    AI CAREER ANALYSIS
+
+                </p>
+
+
+                <h2>
+
+                    🚀 Analyze Your Skills
+
+                </h2>
+
+
+                <p>
+
+                    Enter your current skills and discover
+                    what you need to learn next.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="analysis-box">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        👤 Your Name
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
+
+
+
+                <!-- SKILLS -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        💻 Your Current Skills
+
+                    </label>
+
+
+                    <textarea
+                        id="skills"
+                        placeholder="Example: HTML, CSS, JavaScript, Python"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- CAREER -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        🎯 Select Your Career Goal
+
+                    </label>
+
+
+                    <select id="career">
+
+
+                        <option value="">
+
+                            -- Select Career --
+
+                        </option>
+
+
+                        <option value="Frontend Developer">
+
+                            Frontend Developer
+
+                        </option>
+
+
+                        <option value="Backend Developer">
+
+                            Backend Developer
+
+                        </option>
+
+
+                        <option value="Full Stack Developer">
+
+                            Full Stack Developer
+
+                        </option>
+
+
+                        <option value="Data Analyst">
+
+                            Data Analyst
+
+                        </option>
+
+
+                        <option value="AI/ML Engineer">
+
+                            AI/ML Engineer
+
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="button"
+                    class="analyze-btn"
+                    onclick="analyzeSkills()"
+                >
+
+                    🤖 Analyze My Skills
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- LOADING -->
+
+            <div
+                id="loading"
+                class="loading"
+            >
+
+                <div class="loader"></div>
+
+                <p>
+
+                    🤖 AI is analyzing your skills...
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- RESULTS -->
+        <!-- ========================= -->
+
+        <section
+            id="result"
+            class="result-box"
+        >
+
+
+            <!-- WELCOME -->
+
+            <h2 id="welcome"></h2>
+
+
+
+            <!-- SCORE -->
+
+            <div class="score-card">
+
+
+                <div>
+
+                    <p>Career Readiness Score</p>
+
+                    <h3>Based on your current skills</h3>
+
+                </div>
+
+
+                <div
+                    id="score"
+                    class="score"
+                >
+
+                    0%
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- MATCHED SKILLS -->
+
+            <div class="result-section">
+
+
+                <h3>
+
+                    ✅ Skills You Already Have
+
+                </h3>
+
+
+                <div
+                    id="matchedSkills"
+                    class="skills-container"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- MISSING SKILLS -->
+
+            <div class="result-section">
+
+
+                <h3>
+
+                    ❌ Skills You Need to Learn
+
+                </h3>
+
+
+                <div
+                    id="missingSkills"
+                    class="skills-container"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- RECOMMENDATION -->
+
+            <div class="recommendation">
+
+
+                <h3>
+
+                    💡 AI Recommendation
+
+                </h3>
+
+
+                <p
+                    id="recommendationText"
+                ></p>
+
+
+            </div>
+
+
+
+            <!-- ROADMAP -->
+
+            <div class="roadmap">
+
+
+                <h3>
+
+                    🗺️ Your Personalized Learning Roadmap
+
+                </h3>
+
+
+                <div
+                    id="roadmapSteps"
+                ></div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- INSIGHTS -->
+        <!-- ========================= -->
+
+        <section
+            id="insights"
+            class="insights-section"
+        >
+
+
+            <div class="section-heading">
+
+                <p class="small-title">
+
+                    CAREER INSIGHTS
+
+                </p>
+
+
+                <h2>
+
+                    📊 Your Career Journey
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="insights-grid">
+
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+
+                        🎯
+
+                    </div>
+
+
+                    <h3>
+
+                        Skill Gap Detection
+
+                    </h3>
+
+
+                    <p>
+
+                        Identify the important skills required
+                        for your selected career.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+
+                        🗺️
+
+                    </div>
+
+
+                    <h3>
+
+                        Personalized Roadmap
+
+                    </h3>
+
+
+                    <p>
+
+                        Get a step-by-step learning journey
+                        based on your missing skills.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+
+                        💼
+
+                    </div>
+
+
+                    <h3>
+
+                        Career Readiness
+
+                    </h3>
+
+
+                    <p>
+
+                        Understand how prepared you are for
+                        your chosen technology career.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- FOOTER -->
+        <!-- ========================= -->
+
+        <footer>
+
+
+            <h3>
+
+                🤖 SkillBridge AI
+
+            </h3>
+
+
+            <p>
+
+                AI-Powered Career Intelligence Platform
+
+            </p>
+
+
+            <p class="footer-small">
+
+                Helping students bridge the gap between
+                education and industry.
+
+            </p>
+
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
 
     <script src="/static/script.js"></script>
+
 
 </body>
 
